@@ -31,6 +31,13 @@
     </div>
 
     <!-- article content goes here -->
+
+    <QuoteBlock
+      :color="themeColor"
+      content="I’m proud of [earning]. It’s a different feeling when you can contribute
+      to help your family."
+    ></QuoteBlock>
+
     <v-container>
       <slot></slot>
 
@@ -66,11 +73,13 @@
 <script>
 import Arrow from "./Arrow";
 import Footer from "./Footer";
+import QuoteBlock from "./QuoteBlock";
 
 export default {
   components: {
     Arrow,
     Footer,
+    QuoteBlock,
   },
   props: [
     "themeColor",
