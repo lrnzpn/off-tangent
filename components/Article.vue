@@ -66,6 +66,8 @@
       </div>
     </v-container>
 
+    <ParticipantsModal></ParticipantsModal>
+
     <Footer :color="themeColor"></Footer>
   </div>
 </template>
@@ -74,12 +76,14 @@
 import Arrow from "./Arrow";
 import Footer from "./Footer";
 import QuoteBlock from "./QuoteBlock";
+import ParticipantsModal from "./ParticipantsModal";
 
 export default {
   components: {
     Arrow,
     Footer,
     QuoteBlock,
+    ParticipantsModal,
   },
   props: [
     "themeColor",

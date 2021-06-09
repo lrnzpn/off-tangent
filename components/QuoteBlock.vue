@@ -70,6 +70,7 @@ export default {
       margin-top: 1em;
     }
   }
+
   .quote-block {
     position: relative;
     h1 {
