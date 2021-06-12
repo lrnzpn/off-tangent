@@ -79,6 +79,7 @@ export default {
       color: var(--color);
       padding: 1.5em 0 1.9em 0;
       text-align: center;
+      font-family: $heading-font-bold;
     }
 
     .apostrophe {

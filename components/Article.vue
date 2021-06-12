@@ -1,22 +1,49 @@
 <template>
   <div>
-    <v-navigation-drawer permanent width="120" app>
+      <v-app-bar
+        :fixed='!isDesktop'
+        flat
+        :class="[ isDesktop ? 'no-nav' : '']"
+      >
+          <v-toolbar-title>My files</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-filter</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+      </v-app-bar>
+
+    <v-navigation-drawer 
+        width="100" 
+        app 
+        :permanent="isDesktop"
+        floating
+        :color="sidebarColor"
+        >
       <v-list>
         <v-list-item class="px-2">
           <v-list-item-avatar>
             <v-img
-              src="https://randomuser.me/api/portraits/women/85.jpg"
+              
             ></v-img>
           </v-list-item-avatar>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <div class="hero">
+    <div class="hero" :class="{'pt-16' : !isDesktop}">
       <v-img
-        src="https://via.placeholder.com/720x480"
+        :src="articleBanner"
         width="100vw"
-        height="500px"
-        lazy-src="https://via.placeholder.com/720x480"
+        :lazy-src="articleBanner"
       >
         <v-container class="h-100">
           <div class="h-100 d-flex justify-start align-center">
@@ -30,18 +57,11 @@
       </v-img>
     </div>
 
-    <!-- article content goes here -->
+    <v-container class="px-15">
+        
+      <slot><!-- article content goes here --></slot>
 
-    <QuoteBlock
-      :color="themeColor"
-      content="I’m proud of [earning]. It’s a different feeling when you can contribute
-      to help your family."
-    ></QuoteBlock>
-
-    <v-container>
-      <slot></slot>
-
-      <div class="d-flex justify-space-between align-center">
+      <div class="d-flex justify-space-between align-center my-15">
         <nuxt-link
           :to="`/${prevArticleSlug}`"
           class="article-controls d-flex flex-row"
@@ -75,18 +95,23 @@
 <script>
 import Arrow from "./Arrow";
 import Footer from "./Footer";
-import QuoteBlock from "./QuoteBlock";
 import ParticipantsModal from "./ParticipantsModal";
 
 export default {
+    data() {
+        return {
+            windowWidth:0
+        }
+    },
   components: {
     Arrow,
     Footer,
-    QuoteBlock,
     ParticipantsModal,
   },
   props: [
     "themeColor",
+    "sidebarColor",
+    "articleBanner",
     "articleTitle",
     "articleAuthor",
     "articleShortDesc",
@@ -95,6 +120,23 @@ export default {
     "nextArticle",
     "nextArticleSlug",
   ],
+    methods: {
+        handleResize() {
+            this.windowWidth = window.innerWidth;
+        },
+  },
+  computed: {
+      isDesktop() {
+          return this.windowWidth > 768 ? true : false
+      }
+  },
+  mounted() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();    
+    },
+    beforeDestroy () {
+        window.removeEventListener('resize', this.handleResize);
+    },
 };
 </script>
 
@@ -103,17 +145,35 @@ export default {
   h1 {
     font-family: $heading-font-bold;
     font-size: 4em;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 991px) {
+        font-size: 2.75em;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.25em;
+    }
   }
 
   h3 {
     font-family: $subheading-font;
     font-weight: 600;
     font-size: 1.5em;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 768px) {
+        font-size: .75em;
+    }
   }
 
   p {
     font-family: $subheading-font;
     font-size: 1.25em;
+    color: #FFFFFF;
+    @media screen and (max-width: 768px) {
+        font-size: .75em;
+    }
   }
 }
 
@@ -134,5 +194,9 @@ export default {
       font-weight: 700;
     }
   }
+}
+
+.no-nav {
+    display: none !important;
 }
 </style>
