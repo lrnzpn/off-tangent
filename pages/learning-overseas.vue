@@ -11,6 +11,16 @@
     prev-article-slug="setting-the-pace"
     next-article="Unseen Fervor"
     next-article-slug="unseen-fervor"
+    :article-icon="require('../assets/icons/avatar.png')"
+    secOneTitle="From the other side"
+    :secOneIcon="require('../assets/icons/off tangent/article/ios-globe 1.png')"
+    secOneSlug="ftos"
+    secTwoTitle="Adverse effects"
+    :secTwoIcon="require('../assets/icons/off tangent/article/ios-people 1.png')"
+    secTwoSlug="ae"
+    secThreeTitle="Hopes away from home"
+    :secThreeIcon="require('../assets/icons/off tangent/article/ios-airplane 1.png')"
+    secThreeSlug="hafh"
     >   
     
         <p class="article-text my-sm-15 my-6">
@@ -18,7 +28,7 @@
             The shift to distance learning entails constant adjustments in one’s daily lifestyle as students fulfill their academic requirements while doing their household duties. However, for some Ateneans, the suspension of on-site classes meant traveling thousands of miles away from campus.
         </p>
 
-        <span class="article-subheader my-4">
+        <span id="ftos" class="article-subheader my-4">
             from the other side
         </span>
 
@@ -80,7 +90,7 @@
             Similarly, Gamboa shares that she surmounted a semester filled with meetings held at 3:00 AM to fulfill her commitments as a student and the Health Sciences Society President. However, surviving the hectic adjustments that come with studying abroad does not equate to evading inescapable drawbacks.
         </p>
 
-        <span class="article-subheader my-4">
+        <span id="ae" class="article-subheader my-4">
             adverse effects
         </span>
 
@@ -110,7 +120,7 @@ Peralta experienced these biophysical drawbacks as she shared that she had an "o
 As students are robbed of opportunities to interact and learn with their classmates on campus, Ateneans abroad now need to exert a deliberate yet tiring effort to be able to grasp their modules and balance work with personal life.
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader my-4" id="hafh">
             hopes away from home
         </span>
 

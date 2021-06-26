@@ -11,6 +11,16 @@
     prev-article-slug="learning-overseas"
     next-article="Setting the pace"
     next-article-slug="setting-the-pace"
+    :article-icon="require('../assets/icons/avatar-2.png')"
+    secOneTitle="Burning through the hours"
+    :secOneIcon="require('../assets/icons/off tangent/article/Group 22.png')"
+    secOneSlug="btth"
+    secTwoTitle="Voices of guidance"
+    :secTwoIcon="require('../assets/icons/off tangent/article/ios-chatbubbles 1.png')"
+    secTwoSlug="vog"
+    secThreeTitle="Unrelenting virtue"
+    :secThreeIcon="require('../assets/icons/off tangent/article/ios-partly-sunny 1.png')"
+    secThreeSlug="uv"
     >   
 
         <p class="article-text my-sm-15 my-6">
@@ -18,11 +28,11 @@
 Ventura is one of many financial aid scholars in the Loyola Schools (LS) who continues to grapple with the effects of the nationwide <a href="https://news.abs-cbn.com/news/01/29/21/metro-manila-13-areas-stay-under-gcq-general-community-quarantine-lockdown-in-february-covid-19-update">quarantine</a>. She faces difficulties related to sustaining a conducive online learning setup while helping out with her family’s finances. Despite these personal battles, Ventura powers through hurdle after hurdle.
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader mt-4 mb-2" id="btth">
             burning through the hours
         </span>
 
-        <v-row class="my-sm-10 my-5">
+        <v-row class="mb-sm-10 mb-5 mt-sm-2 mt-2">
             <v-col cols="12">
                 <v-img 
                 :src="require('../assets/images/unseen-fervor/Rectangle 48-2.png')"
@@ -68,7 +78,7 @@ Ventura is one of many financial aid scholars in the Loyola Schools (LS) who con
 During such times of heightened anxiety, Ventura turns to a few close friends for emotional support, as they provide her with a safe space to confide in without the pressure of having to update them regularly. She is also grateful to the Office of Admission and Aid (OAA) for its efforts in mitigating scholars’ issues, such as unstable internet connection. Ventura herself received a WiFi <a href="https://www.uswitch.com/broadband/guides/what-is-a-mobile-dongle/#:~:text=A%20dongle%20is%20a%20small,be%20used%20on%20the%20go">dongle</a>—a USB device that allows internet access—from the OAA upon reaching out to the office. "OAA has been helping out a lot, like proactively helping out," Ventura says, "They’re very personal in their approach."
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader my-4" id="vog">
             voices of guidance
         </span>
 
@@ -80,7 +90,7 @@ In the midst of hardships, she advises scholars to communicate with their design
 Magboo also encourages the need to establish personal limits: "The blurred lines between studies and personal life can be overwhelming, so setting up a boundary can help keep you sane," she notes.
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader my-4" id="uv">
             UNRELENTING VIRTUE
         </span>
 

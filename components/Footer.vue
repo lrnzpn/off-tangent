@@ -46,11 +46,19 @@ export default {
     color: #f4f4f4;
     margin-top: 1.5em;
     margin-bottom: 1em;
+
+    @media screen and (max-width: 768px) {
+        font-size: .75em;
+    }
   }
 
   p {
     font-size: 0.9em;
     color: #f4f4f4;
+
+    @media screen and (max-width: 768px) {
+        font-size: .75em;
+    }
   }
 }
 

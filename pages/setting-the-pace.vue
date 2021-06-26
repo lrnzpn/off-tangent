@@ -11,6 +11,13 @@
     prev-article-slug="unseen-fervor"
     next-article="Learning overseas"
     next-article-slug="learning-overseas"
+    :article-icon="require('../assets/icons/avatar-1.png')"
+    secOneTitle="Unseen hurdles"
+    :secOneIcon="require('../assets/icons/off tangent/article/ios-body 1.png')"
+    secOneSlug="uh"
+    secTwoTitle="Jumping through the hoops"
+    :secTwoIcon="require('../assets/icons/off tangent/article/ios-bulb 1.png')"
+    secTwoSlug="jtth"
     >   
 
         <p class="article-text my-sm-15 my-6">
@@ -18,7 +25,7 @@
 With everyone hunkered down in their own homes, it is difficult to identify intangible problems like online learning adjustments. Pia Cabañero (2 AB IS), a neurodivergent Atenean, had just settled down with the nuances of college life when online classes brought another wave of adjustments last year. With varying difficulties, she tackles the unfamiliar realm of online learning to create fulfilling experiences.
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader my-4" id="uh">
             UNSEEN HURDLES
         </span>
 
@@ -52,7 +59,7 @@ With everyone hunkered down in their own homes, it is difficult to identify inta
         </p>
 
         <QuoteBlock
-        color="#EE9211"
+        color="#E06130"
         content="I just really miss the presence of a teacher, telling us the lectures, giving us their insights."
         class="my-sm-8 my-4"
         ></QuoteBlock>
@@ -65,7 +72,7 @@ Besides learning difficulties, neurodivergent people also struggle with soft ski
         </p>
         
         <QuoteBlock
-        color="#EE9211"
+        color="#E06130"
         content="Spectrum talaga sila, na kailangan every student with ASD or every student na considered neurodivergent has to be [considered] a special case."
         class="my-sm-8 my-4"
         ></QuoteBlock>
@@ -75,7 +82,7 @@ Besides learning difficulties, neurodivergent people also struggle with soft ski
 Cabañero is also thankful for having found a support system in the <a href="https://www.ateneospeed.org/">Ateneo Special Education Society (SPEED)</a>, a support group that aims to create inclusive spaces for persons with special needs (PWSNs) within and outside the Ateneo. Cabañero, who is also the Ateneo SPEED’s Creative Director, shares that the organization’s mental health check-ins provide a sense of accommodation and acceptance for its members during the pandemic.
         </p>
 
-        <span class="article-subheader my-4">
+        <span class="article-subheader my-4" id="jtth">
             JUMPING THROUGH HOOPS
         </span>
 

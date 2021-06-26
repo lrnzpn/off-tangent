@@ -80,6 +80,10 @@ export default {
       padding: 1.5em 0 1.9em 0;
       text-align: center;
       font-family: $heading-font-bold;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.25em;
+      }
     }
 
     .apostrophe {

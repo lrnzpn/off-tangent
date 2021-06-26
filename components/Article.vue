@@ -30,13 +30,83 @@
         :color="sidebarColor"
         >
       <v-list>
-        <v-list-item class="px-2">
+        <v-list-item class="pa-2 d-flex flex-column">
           <v-list-item-avatar>
             <v-img
-              
+                :src="articleIcon"
+                :lazy-src="articleIcon"
             ></v-img>
           </v-list-item-avatar>
+          <span class="white--text nav-text">{{articleTitle}}</span>
         </v-list-item>
+
+        <v-list-item class="pa-2 d-flex flex-column justify-center align-center" link to="/">
+            <v-img
+                :src="require('../assets/icons/off tangent/article/ios-home 1.png')"
+                :lazy-src="require('../assets/icons/off tangent/article/ios-home 1.png')"
+                height="35"
+                width="35"
+            ></v-img>
+            <span class="white--text nav-text">Home</span>
+        </v-list-item>
+
+        <!-- links -->
+        <v-list-item 
+            class="pa-2 d-flex flex-column" 
+            v-if="secOneTitle" 
+            @click="goto(secOneSlug)"
+            >            
+            <v-img
+                :src="secOneIcon"
+                :lazy-src="secOneIcon"
+                height="35"
+                width="35"
+            ></v-img>
+            <span class="white--text nav-text">{{secOneTitle}}</span>
+        </v-list-item>
+        <v-list-item class="pa-2 d-flex flex-column" 
+            v-if="secTwoTitle"
+            @click="goto(secTwoSlug)">
+            <v-img
+                :src="secTwoIcon"
+                :lazy-src="secTwoIcon"
+                height="35"
+                width="35"
+            ></v-img>
+            <span class="white--text nav-text">{{secTwoTitle}}</span>
+        </v-list-item>
+        <v-list-item class="pa-2 d-flex flex-column" 
+            v-if="secThreeTitle"
+            @click="goto(secThreeSlug)">
+            <v-img
+                :src="secThreeIcon"
+                :lazy-src="secThreeIcon"
+                height="35"
+                width="35"
+            ></v-img>
+            <span class="white--text nav-text">{{secThreeTitle}}</span>
+        </v-list-item>
+        <!-- end links -->
+
+        <v-list-item 
+            class="pa-2 d-flex flex-column justify-center align-center"
+            link
+            :to="`/${prevArticleSlug}`"
+            >
+            <Arrow direction="left" color="#fff" width="40" height="40" />
+            <span class="white--text nav-text">Previous article</span>
+            <!-- <nuxt-link :to="`/${prevArticleSlug}`" class="nav-link"></nuxt-link> -->
+        </v-list-item>
+
+        <v-list-item 
+            class="pa-2 d-flex flex-column justify-center align-center"
+            link
+            :to="`/${nextArticleSlug}`"
+            >
+            <Arrow direction="right" color="#fff" width="40" height="40"/>
+            <span class="white--text nav-text">Next article</span>
+        </v-list-item>
+
       </v-list>
     </v-navigation-drawer>
     <div class="hero" :class="{'pt-16' : !isDesktop}">
@@ -66,7 +136,8 @@
           :to="`/${prevArticleSlug}`"
           class="article-controls d-flex flex-row"
         >
-          <Arrow direction="left" :color="themeColor" />
+          <Arrow direction="left" :color="themeColor" width="58" height="58" v-if="isDesktop" />
+          <Arrow direction="left" :color="themeColor" width="30" height="30" v-else />
           <div class="d-flex justify-center align-start flex-column ml-2">
             <span :style="`color: ${themeColor}`">previous</span>
             <span>{{ prevArticle }}</span>
@@ -77,7 +148,8 @@
           :to="`/${nextArticleSlug}`"
           class="article-controls d-flex flex-row-reverse"
         >
-          <Arrow direction="right" :color="themeColor" />
+          <Arrow direction="right" :color="themeColor" width="58" height="58" v-if="isDesktop" />
+          <Arrow direction="right" :color="themeColor" width="30" height="30" v-else />
           <div class="d-flex justify-center align-end flex-column mr-2">
             <span :style="`color: ${themeColor}`">next</span>
             <span>{{ nextArticle }}</span>
@@ -120,10 +192,25 @@ export default {
     "prevArticleSlug",
     "nextArticle",
     "nextArticleSlug",
+    "secOneIcon",
+    "secTwoIcon",
+    "secThreeIcon",
+    "secOneTitle",
+    "secTwoTitle",
+    "secThreeTitle",
+    "secOneSlug",
+    "secTwoSlug",
+    "secThreeSlug",
+    "articleIcon"
   ],
     methods: {
         handleResize() {
             this.windowWidth = window.innerWidth;
+        },
+        goto(path) {
+            let el = document.getElementById(path)
+            let top = el.offsetTop;
+            window.scrollTo({top:(0, top), behavior: 'smooth'});
         },
   },
   computed: {
@@ -149,7 +236,7 @@ export default {
     color: #FFFFFF;
 
     @media screen and (max-width: 991px) {
-        font-size: 2.75em;
+        font-size: 2.5em;
     }
 
     @media screen and (max-width: 768px) {
@@ -186,6 +273,7 @@ export default {
       text-transform: uppercase;
       font-family: $subheading-font;
       font-weight: 600;
+
     }
 
     &:last-child {
@@ -193,11 +281,40 @@ export default {
       color: #000000;
       font-family: $body-font;
       font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+            font-size: .75em;
+        }   
     }
   }
 }
 
 .no-nav {
     display: none !important;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-text {
+    font-size: .8em;
+    text-align:center;
+    max-width: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.v-list-item {
+    min-height: auto;
+}
+
+.row {
+    margin: -4px;
+}
+
+.col {
+    padding: 4px;
 }
 </style>
