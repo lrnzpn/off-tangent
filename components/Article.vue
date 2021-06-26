@@ -86,9 +86,9 @@
       </div>
     </v-container>
 
-    <ParticipantsModal></ParticipantsModal>
+    <!-- <ParticipantsModal></ParticipantsModal> -->
 
-    <Footer :color="themeColor"></Footer>
+    <Footer :color="footerColor"></Footer>
   </div>
 </template>
 
@@ -111,6 +111,7 @@ export default {
   props: [
     "themeColor",
     "sidebarColor",
+    "footerColor",
     "articleBanner",
     "articleTitle",
     "articleAuthor",

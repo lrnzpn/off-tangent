@@ -2,6 +2,7 @@
     <Article 
     theme-color="#F26D21"
     sidebar-color="#E06130"
+    footer-color="#D14E1B"
     :article-banner="require('../assets/banners/overlay-image-1.png')"
     article-title="Learning overseas"
     article-author="by Russell Louis Ku and Eala Julienne Nolasco"
@@ -160,7 +161,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-
-</style>
