@@ -37,7 +37,7 @@
             <v-list-item 
                 class="pa-2 d-flex justify-center align-center menu-item" 
                 v-if="secOneTitle" 
-                @click="goto(secOneSlug)"
+                @click="goto(secOneSlug), closeMenu()"
                 flat
                 >            
                 <div style="height:35px;width:35px;">
@@ -53,7 +53,7 @@
             </v-list-item>
             <v-list-item class="pa-2 d-flex justify-center align-center menu-item" 
                 v-if="secTwoTitle"
-                @click="goto(secTwoSlug)">
+                @click="goto(secTwoSlug), closeMenu()">
                 <div style="height:35px;width:35px;">
                 <v-img
                     :src="secTwoIcon"
@@ -67,7 +67,7 @@
             </v-list-item>
             <v-list-item class="pa-2 d-flex justify-center align-center menu-item" 
                 v-if="secThreeTitle"
-                @click="goto(secThreeSlug)">
+                @click="goto(secThreeSlug), closeMenu()">
                 <div style="height:35px;width:35px;">
                 <v-img
                     :src="secThreeIcon"
@@ -85,6 +85,7 @@
                 class="pa-2 d-flex justify-center align-center menu-item"
                 link
                 :to="`/${prevArticleSlug}`"
+                @click.native="closeMenu"
                 >
                 <Arrow direction="left" color="#fff" width="40" height="40" />
                 <span class="white--text nav-text">Previous article</span>
@@ -95,6 +96,7 @@
                 class="pa-2 d-flex justify-center align-center menu-item"
                 link
                 :to="`/${nextArticleSlug}`"
+                @click.native="closeMenu"
                 >
                 <Arrow direction="right" color="#fff" width="40" height="40"/>
                 <span class="white--text nav-text">Next article</span>
@@ -295,11 +297,15 @@ export default {
         goto(path) {
             let el = document.getElementById(path)
             let top = el.offsetTop;
-            window.scrollTo({top:(0, top), behavior: 'smooth'});
+            window.scrollTo({top:(0, top - 65), behavior: 'smooth'});
+
         },
         toggleNav() {
             this.menu = !this.menu
             console.log(this.menu)
+        },
+        closeMenu() {
+           this.$store.commit('setNavState', false);
         }
 
   },
