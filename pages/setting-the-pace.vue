@@ -20,12 +20,15 @@
     secTwoSlug="jtth"
     >   
 
-        <p class="article-text my-sm-15 my-6">
+       <section>
+            <p class="article-text my-sm-15 my-6">
             IN A virtual world where communication is stripped down to emails and pixelated faces, connecting with people has become challenging. In the absence of facial cues that one may easily find in an on-site setting, Ateneo’s neurodivergent students face unique learning difficulties amid the shift to online learning.<br><br>
 With everyone hunkered down in their own homes, it is difficult to identify intangible problems like online learning adjustments. Pia Cabañero (2 AB IS), a neurodivergent Atenean, had just settled down with the nuances of college life when online classes brought another wave of adjustments last year. With varying difficulties, she tackles the unfamiliar realm of online learning to create fulfilling experiences.
         </p>
 
-        <span class="article-subheader my-4" id="uh">
+       </section>
+        <section>
+            <span class="article-subheader my-4" id="uh">
             UNSEEN HURDLES
         </span>
 
@@ -81,8 +84,10 @@ Besides learning difficulties, neurodivergent people also struggle with soft ski
             Although socializing remains an important aspect of Cabañero’s college experience, she finds difficulty in bonding with others as online interactions easily become transactional. Despite these setbacks, Cabañero continues to count her blessings. “I really appreciate the accessible features of the Canvas,” she says. The Inbox feature, in particular, delights her. “If you wanna talk to your profs, it’s so easy!” she adds. <br><br>
 Cabañero is also thankful for having found a support system in the <a href="https://www.ateneospeed.org/">Ateneo Special Education Society (SPEED)</a>, a support group that aims to create inclusive spaces for persons with special needs (PWSNs) within and outside the Ateneo. Cabañero, who is also the Ateneo SPEED’s Creative Director, shares that the organization’s mental health check-ins provide a sense of accommodation and acceptance for its members during the pandemic.
         </p>
+        </section>
 
-        <span class="article-subheader my-4" id="jtth">
+        <section>
+            <span class="article-subheader my-4" id="jtth">
             JUMPING THROUGH HOOPS
         </span>
 
@@ -117,6 +122,7 @@ Ripotola elaborates that collaboration with the home includes conducting check-i
 In view of online learning, especially, Ripotola says that the virtual classroom is one of the most important support systems for neurodivergent students. She dubs the teaching faculty as “frontliners” for neurodivergent Ateneans because of their close interactions with each other. In order to respond to academic concerns that arise from either the students or the professors, the LSOGC requests the faculty to make necessary adjustments such as finding alternative requirements or discussion methods.<br><br>
 The acceptance of a sector is inseparable from accommodating its needs; close collaboration and research is still needed in order to achieve inclusivity and accessibility for neurodivergent Ateneans.  In recognizing and responding to neurodivergent Ateneans’ needs, the University’s stakeholders can level the playing field of online learning.
         </p>
+        </section>
 
     </Article>
 </template>

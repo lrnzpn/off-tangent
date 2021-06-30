@@ -6,16 +6,6 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      
-    }
-  }
-}
-</script>
-
 <style lang="scss">
 .h-100 {
     height: 100%;

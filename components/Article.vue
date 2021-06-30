@@ -4,23 +4,103 @@
         :fixed='!isDesktop'
         flat
         :class="[ isDesktop ? 'no-nav' : '']"
+        :color="sidebarColor"
+        height="64px"
+        class="px-sm-2 px-1"
       >
-          <v-toolbar-title>My files</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-filter</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+        <v-btn 
+            icon 
+            link 
+            to="/" 
+            x-large 
+            text 
+            color="#FFF"
+            class="back"
+            :ripple="false"
+            >
+            <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+        <v-spacer></v-spacer>
+        <span class="d-block nav-title">
+            {{articleTitle}}
+        </span>
+        <v-spacer></v-spacer>
+        <Burger />
+        
       </v-app-bar>
+      <Menu>
+            <v-list
+            class="dropdown-list"
+            :color="footerColor"
+        >
+            <!-- links -->
+            <v-list-item 
+                class="pa-2 d-flex justify-center align-center menu-item" 
+                v-if="secOneTitle" 
+                @click="goto(secOneSlug)"
+                flat
+                >            
+                <div style="height:35px;width:35px;">
+                    <v-img
+                    :src="secOneIcon"
+                    :lazy-src="secOneIcon"
+                    height="30"
+                    width="30"
+                    contain
+                    ></v-img>
+                </div>
+                <span class="white--text nav-text">{{secOneTitle}}</span>
+            </v-list-item>
+            <v-list-item class="pa-2 d-flex justify-center align-center menu-item" 
+                v-if="secTwoTitle"
+                @click="goto(secTwoSlug)">
+                <div style="height:35px;width:35px;">
+                <v-img
+                    :src="secTwoIcon"
+                    :lazy-src="secTwoIcon"
+                    height="30"
+                    width="30"
+                    contain
+                ></v-img>
+                </div>
+                <span class="white--text nav-text">{{secTwoTitle}}</span>
+            </v-list-item>
+            <v-list-item class="pa-2 d-flex justify-center align-center menu-item" 
+                v-if="secThreeTitle"
+                @click="goto(secThreeSlug)">
+                <div style="height:35px;width:35px;">
+                <v-img
+                    :src="secThreeIcon"
+                    :lazy-src="secThreeIcon"
+                    height="30"
+                    width="30"
+                    contain
+                ></v-img>
+                </div>
+                <span class="white--text nav-text">{{secThreeTitle}}</span>
+            </v-list-item>
+            <!-- end links -->
+
+            <v-list-item 
+                class="pa-2 d-flex justify-center align-center menu-item"
+                link
+                :to="`/${prevArticleSlug}`"
+                >
+                <Arrow direction="left" color="#fff" width="40" height="40" />
+                <span class="white--text nav-text">Previous article</span>
+                <!-- <nuxt-link :to="`/${prevArticleSlug}`" class="nav-link"></nuxt-link> -->
+            </v-list-item>
+
+            <v-list-item 
+                class="pa-2 d-flex justify-center align-center menu-item"
+                link
+                :to="`/${nextArticleSlug}`"
+                >
+                <Arrow direction="right" color="#fff" width="40" height="40"/>
+                <span class="white--text nav-text">Next article</span>
+            </v-list-item>
+        </v-list>
+        </Menu>
 
     <v-navigation-drawer 
         width="100" 
@@ -59,8 +139,8 @@
             <v-img
                 :src="secOneIcon"
                 :lazy-src="secOneIcon"
-                height="35"
-                width="35"
+                height="32"
+                width="32"
             ></v-img>
             <span class="white--text nav-text">{{secOneTitle}}</span>
         </v-list-item>
@@ -70,8 +150,8 @@
             <v-img
                 :src="secTwoIcon"
                 :lazy-src="secTwoIcon"
-                height="35"
-                width="35"
+                height="32"
+                width="32"
             ></v-img>
             <span class="white--text nav-text">{{secTwoTitle}}</span>
         </v-list-item>
@@ -81,8 +161,8 @@
             <v-img
                 :src="secThreeIcon"
                 :lazy-src="secThreeIcon"
-                height="35"
-                width="35"
+                height="32"
+                width="32"
             ></v-img>
             <span class="white--text nav-text">{{secThreeTitle}}</span>
         </v-list-item>
@@ -109,14 +189,14 @@
 
       </v-list>
     </v-navigation-drawer>
-    <div class="hero" :class="{'pt-16' : !isDesktop}">
+    <div class="hero" :class="{'pt-12' : !isDesktop}">
       <v-img
         :src="articleBanner"
         width="100vw"
         :lazy-src="articleBanner"
       >
         <v-container class="h-100">
-          <div class="h-100 d-flex justify-start align-center">
+          <div class="h-100 d-flex justify-start align-center px-md-1 px-2">
             <div>
               <h1>{{ articleTitle }}</h1>
               <h3>{{ articleAuthor }}</h3>
@@ -127,7 +207,7 @@
       </v-img>
     </div>
 
-    <v-container class="px-15">
+    <v-container class="px-sm-15 px-8">
         
       <slot><!-- article content goes here --></slot>
 
@@ -167,18 +247,23 @@
 <script>
 import Arrow from "./Arrow";
 import Footer from "./Footer";
+import Burger from "./Burger";
+import Menu from "./Menu";
 import ParticipantsModal from "./ParticipantsModal";
 
 export default {
     data() {
         return {
-            windowWidth:0
+            windowWidth:0,
+            menu: false
         }
     },
   components: {
     Arrow,
     Footer,
     ParticipantsModal,
+    Burger,
+    Menu
   },
   props: [
     "themeColor",
@@ -212,15 +297,23 @@ export default {
             let top = el.offsetTop;
             window.scrollTo({top:(0, top), behavior: 'smooth'});
         },
+        toggleNav() {
+            this.menu = !this.menu
+            console.log(this.menu)
+        }
+
   },
   computed: {
       isDesktop() {
           return this.windowWidth > 768 ? true : false
+      },
+      isNavOpen() {
+          return this.menu
       }
   },
   mounted() {
         window.addEventListener('resize', this.handleResize);
-        this.handleResize();    
+        this.handleResize(); 
     },
     beforeDestroy () {
         window.removeEventListener('resize', this.handleResize);
@@ -289,12 +382,37 @@ export default {
   }
 }
 
+.nav-title {
+    font-family: $subheading-font;
+    font-weight: 600;
+    color: #FFF;
+    font-size: 1em;
+}
+
+.menu, .back{
+    &:focus::before, 
+    &:hover::before, 
+    i::after {
+        background: none !important;
+    }
+}
+
+
 .no-nav {
     display: none !important;
 }
 
 .nav-link {
     text-decoration: none;
+}
+
+.dropdown-list {
+    .nav-text {
+        max-width: 160px;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 12px;
+    }
 }
 
 .nav-text {
@@ -317,4 +435,6 @@ export default {
 .col {
     padding: 4px;
 }
+
+
 </style>

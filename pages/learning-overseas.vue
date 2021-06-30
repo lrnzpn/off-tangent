@@ -23,12 +23,15 @@
     secThreeSlug="hafh"
     >   
     
-        <p class="article-text my-sm-15 my-6">
-            STRIKING THE balance between home and school is a challenge shared by every student during the COVID-19 pandemic. In Ateneo, no student was fully prepared to leave the Red Brick Road quiet and empty as classes went fully online.<br><br>
-            The shift to distance learning entails constant adjustments in one’s daily lifestyle as students fulfill their academic requirements while doing their household duties. However, for some Ateneans, the suspension of on-site classes meant traveling thousands of miles away from campus.
-        </p>
+        <section>
+            <p class="article-text my-sm-15 my-6">
+                STRIKING THE balance between home and school is a challenge shared by every student during the COVID-19 pandemic. In Ateneo, no student was fully prepared to leave the Red Brick Road quiet and empty as classes went fully online.<br><br>
+                The shift to distance learning entails constant adjustments in one’s daily lifestyle as students fulfill their academic requirements while doing their household duties. However, for some Ateneans, the suspension of on-site classes meant traveling thousands of miles away from campus.
+            </p>
+        </section>
 
-        <span id="ftos" class="article-subheader my-4">
+        <section>
+            <span id="ftos" class="article-subheader my-4">
             from the other side
         </span>
 
@@ -89,8 +92,10 @@
             Aside from this, Peralta shares that being miles away from the Philippines made her feel powerless in pushing for change in her community, having once been an active volunteer for sociopolitical mobilizations. "I hated being so far away when so much was happening back home. I’m used to always being the first to volunteer and participate in funding drives, soup kitchens, protests, and relief operations," she explains.<br><br>
             Similarly, Gamboa shares that she surmounted a semester filled with meetings held at 3:00 AM to fulfill her commitments as a student and the Health Sciences Society President. However, surviving the hectic adjustments that come with studying abroad does not equate to evading inescapable drawbacks.
         </p>
+        </section>
 
-        <span id="ae" class="article-subheader my-4">
+        <section>
+            <span id="ae" class="article-subheader my-4">
             adverse effects
         </span>
 
@@ -119,8 +124,10 @@ Studies have shown that this can have adverse effects on students’ physical an
 Peralta experienced these biophysical drawbacks as she shared that she had an "out-of-body experience" when she was called for recitation during her synchronous sessions for her Philosophy class. "I was easily able to answer my professor but then [my] classmate had a clarification. The professor then asked me to repeat what I had said, but I was entirely unable to because I was just too out of it," she explains.
 As students are robbed of opportunities to interact and learn with their classmates on campus, Ateneans abroad now need to exert a deliberate yet tiring effort to be able to grasp their modules and balance work with personal life.
         </p>
+        </section>
 
-        <span class="article-subheader my-4" id="hafh">
+        <section>
+            <span class="article-subheader my-4" id="hafh">
             hopes away from home
         </span>
 
@@ -157,6 +164,7 @@ As students are robbed of opportunities to interact and learn with their classma
             Despite their distance from the Philippines, Ateneans abroad note how studying online has helped them realize the importance of their commitment in pursuing their education as part of forming a better society.<br><br>
             "I hope that this whole pandemic taught each of us the importance of a strong public health infrastructure, good governance, and the need for society to work together towards creating a collective action for change," Gamboa says.
         </p>
+        </section>
     </Article>
 </template>
 
