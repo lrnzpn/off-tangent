@@ -80,7 +80,7 @@ Besides learning difficulties, neurodivergent people also struggle with soft ski
         class="my-sm-8 my-4"
         ></QuoteBlock>
 
-        <p class="article-text">
+        <p class="article-text mb-6">
             Although socializing remains an important aspect of Cabañero’s college experience, she finds difficulty in bonding with others as online interactions easily become transactional. Despite these setbacks, Cabañero continues to count her blessings. “I really appreciate the accessible features of the Canvas,” she says. The Inbox feature, in particular, delights her. “If you wanna talk to your profs, it’s so easy!” she adds. <br><br>
 Cabañero is also thankful for having found a support system in the <a href="https://www.ateneospeed.org/">Ateneo Special Education Society (SPEED)</a>, a support group that aims to create inclusive spaces for persons with special needs (PWSNs) within and outside the Ateneo. Cabañero, who is also the Ateneo SPEED’s Creative Director, shares that the organization’s mental health check-ins provide a sense of accommodation and acceptance for its members during the pandemic.
         </p>
@@ -135,6 +135,19 @@ export default {
     components: {
         Article,
         QuoteBlock
+    },
+    head() {
+    return {
+      title: 'Setting the Pace',
+      meta: [
+        {
+          hid: 'Setting the Pace',
+          name: 'Setting the Pace',
+          content:
+            'As online learning continues to be implemented in the Ateneo, issues on the neurodivergent socialization and accessibility of the Learning Management System  continue to prevail.',
+        },
+      ],
     }
+  },
 }
 </script>

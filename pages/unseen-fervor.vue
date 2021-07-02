@@ -135,6 +135,19 @@ export default {
     components: {
         Article,
         QuoteBlock
+    },
+    head() {
+    return {
+      title: 'Unseen Fervor',
+      meta: [
+        {
+          hid: 'Unseen Fervor',
+          name: 'Unseen Fervor',
+          content:
+            'With the onset of a new semester, the scholar population remains diligent amid problems posed by the pandemic and two typhoons.',
+        },
+      ],
     }
+  },
 }
 </script>

@@ -6,16 +6,23 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - off-tangent',
-    title: 'off-tangent',
+    titleTemplate: '%s | The GUIDON',
+    title: 'Off Tangent',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
-    ],
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Underpowered by Kris M. Fetiza, Derick M. Gabrillo, and Zachary C. Gonzales' },
+        { property: "og:title", content: "Off Tangent: As the Loyola Schools completes its first, online academic year, The GUIDON dives into three unique sectors of the Ateneo community."
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: "" },
+        { property: "og:description", content: "Off Tangent" },
+        { property: "og:url", content: "" }
+  
+      ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap'}

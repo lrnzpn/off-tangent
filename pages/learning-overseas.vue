@@ -176,6 +176,19 @@ export default {
     components: {
         Article,
         QuoteBlock
+    },
+    head() {
+    return {
+      title: 'Learning Overseas',
+      meta: [
+        {
+          hid: 'Learning Overseas',
+          name: 'Learning Overseas',
+          content:
+            'With some Ateneans forced to travel thousands of miles away abroad amid the COVID-19 pandemic, they face unique challenges in adjusting to the demands of online learning.',
+        },
+      ],
     }
+  },
 }
 </script>
