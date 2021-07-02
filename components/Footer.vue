@@ -30,6 +30,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+    font-family: 'MADE Outer Sans';
+    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Regular\ PERSONAL\ USE.otf') format('opentype');
+}
+
+$heading-font: 'MADE Outer Sans';
+
 .footer {
   background-color: var(--color);
 

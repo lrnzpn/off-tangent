@@ -149,6 +149,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@font-face {
+    font-family: 'MADE Outer Sans Bold';
+    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'MADE Outer Sans';
+    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Regular\ PERSONAL\ USE.otf') format('opentype');
+}
+
+$heading-font: 'MADE Outer Sans';
+$heading-font-bold: 'MADE Outer Sans Bold';
+
+
 section {
   height: calc(100vh - 74.98px);
 

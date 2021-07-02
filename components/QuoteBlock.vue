@@ -53,6 +53,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+    font-family: 'MADE Outer Sans Bold';
+    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf') format('opentype');
+}
+
+$heading-font-bold: 'MADE Outer Sans Bold';
+
+
 .quote-container {
   hr {
     width: 40%;

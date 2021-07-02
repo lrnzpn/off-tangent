@@ -3,17 +3,5 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 
-@font-face {
-    font-family: 'MADE Outer Sans Bold';
-    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'MADE Outer Sans';
-    src: url('../assets/made_outer_sans/MADE\ Outer\ Sans\ Regular\ PERSONAL\ USE.otf') format('opentype');
-}
-
-$heading-font: 'MADE Outer Sans';
-$heading-font-bold: 'MADE Outer Sans Bold';
 $subheading-font: 'Source Sans Pro', sans-serif;
 $body-font: 'Nunito Sans', sans-serif;
