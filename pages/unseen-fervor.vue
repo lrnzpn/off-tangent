@@ -47,11 +47,15 @@ Ventura is one of many financial aid scholars in the Loyola Schools (LS) who con
         </v-row>
 
         <p class="article-text">
-            "Para na daw akong machine kasi tuloy-tuloy lang ako (I’m called a machine since I work continuously)," Ventura recalls, referring to her boyfriend. At the pace she is working, her sleep averages three to four hours. Every hour of the day must be allotted for a task, from household chores to academic work. Eating lunch has a time limit, and the same goes for taking a break.
+            "<i>Para na daw akong machine kasi tuloy-tuloy lang ako</i> (I’m called a machine since I work continuously)," Ventura recalls, referring to her boyfriend. At the pace she is working, her sleep averages three to four hours. Every hour of the day must be allotted for a task, from household chores to academic work. Eating lunch has a time limit, and the same goes for taking a break.
         </p>
         
         <p class="article-text">
             This is how Ventura manages her time between school work and an online freelance job, the latter being born out of present circumstances. Like many other Filipinos, her mother and her cousin lost their jobs earlier in the lockdown. Due to health concerns, her mom cannot afford to leave their home and find another job. This prompted Ventura to help in paying for utility bills, rental fees, and groceries.
+        </p>
+
+        <p class="article-text">
+            "I’m proud of [earning]. It’s a different feeling when you can contribute to help your family," Ventura adds. She recently managed to buy a kitchen set—complete with pots, pans, and knives for her mom.
         </p>
 
         <v-row class="my-sm-10 my-5">
@@ -65,10 +69,6 @@ Ventura is one of many financial aid scholars in the Loyola Schools (LS) who con
             </v-col>
         </v-row>
 
-        <p class="article-text">
-            "I’m proud of [earning]. It’s a different feeling when you can contribute to help your family," Ventura adds. She recently managed to buy a kitchen set—complete with pots, pans, and knives for her mom.
-        </p>
-
         <QuoteBlock
         color="#2181D8"
         content="I’m proud of [earning]. It’s a different feeling when you can contribute to help your family."
@@ -77,7 +77,7 @@ Ventura is one of many financial aid scholars in the Loyola Schools (LS) who con
 
         <p class="article-text">
             However, her headstrong attitude is put to the test when confronting other challenges directly related to the pandemic. At one point during the quarantine, her cousin tested positive for COVID-19. Ventura herself started experiencing fatigue around the same time, leading to further emotional distress given that they live under the same roof.<br><br>
-"Ang hirap mag aral kapag alam mong there’s a risk [of getting infected] already that’s present (It’s difficult to study if you know there’s a risk [of getting infected] already that’s present)," Ventura recalls.<br><br>
+"<i>Ang hirap mag aral kapag alam mong</i> there’s a risk [of getting infected] already that’s present (It’s difficult to study if you know there’s a risk [of getting infected] already that’s present)," Ventura recalls.<br><br>
 During such times of heightened anxiety, Ventura turns to a few close friends for emotional support, as they provide her with a safe space to confide in without the pressure of having to update them regularly. She is also grateful to the Office of Admission and Aid (OAA) for its efforts in mitigating scholars’ issues, such as unstable internet connection. Ventura herself received a WiFi <a href="https://www.uswitch.com/broadband/guides/what-is-a-mobile-dongle/#:~:text=A%20dongle%20is%20a%20small,be%20used%20on%20the%20go">dongle</a>—a USB device that allows internet access—from the OAA upon reaching out to the office. "OAA has been helping out a lot, like proactively helping out," Ventura says, "They’re very personal in their approach."
         </p>
         </section>
