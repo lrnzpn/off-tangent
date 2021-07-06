@@ -4,7 +4,7 @@
       <div class="flex">
         <div class="landing-container student-abroad-bg">
           <label>
-            Student abroad
+            Students abroad
           </label>
           <div class="hover-wrapper">
             <h3>STUDENTS ABROAD</h3>
@@ -54,7 +54,7 @@
             <h3>NEURODIVERGENT STUDENTS</h3>
             <h2>Setting the pace</h2>
             <h4>by Adrian Jesper C. Cea and Christianna P. Lugod</h4>
-            <p>As online learning continues to be implemented in the Ateneo, issues on the neurodivergent socialization and accessibility of the Learning Management System continue to prevail.</p>
+            <p>As the Loyola Schools begins its second academic year, The GUIDON dives into the experiences of three unique sectors of the Ateneo community as they navigate the University's online pilot year.</p>
             <a href="/setting-the-pace">
               <button class="neurodivergent-students-text-color">
                 Read more
