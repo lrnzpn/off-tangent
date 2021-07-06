@@ -15,14 +15,14 @@
             <input type="text" v-model="search" placeholder="Find a participant"/>    
         </div>
           
-          <div v-for="(participant,index) in filteredParticipants" :key="index" class="participant-container">
-              <div class="participant-wrapper">
+          <div v-for="(participant,index) in filteredParticipants" :key="index" class="participant-container" >
+              <a :href="participant.link" class="participant-wrapper">
                   <img :src="participant.image" :alt="participant.name">
                   <div>
                     <h6>{{participant.name}}</h6>
                     <p>{{participant.course}}</p>
                   </div>
-              </div>
+              </a>
               <div class="participant-icons">
                   <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.5 13.1131C8.36328 13.1131 9.875 11.6365 9.875 9.7381V4.1131C9.875 2.24982 8.36328 0.738098 6.5 0.738098C4.60156 0.738098 3.125 2.24982 3.125 4.1131V9.7381C3.125 11.6365 4.60156 13.1131 6.5 13.1131ZM12.125 7.4881H11.5625C11.2461 7.4881 11 7.76935 11 8.0506V9.7381C11 12.3748 8.71484 14.4842 6.04297 14.2381C3.6875 13.992 2 11.9178 2 9.56232V8.0506C2 7.76935 1.71875 7.4881 1.4375 7.4881H0.875C0.558594 7.4881 0.3125 7.76935 0.3125 8.0506V9.492C0.3125 12.6209 2.52734 15.4334 5.65625 15.8553V17.0506H3.6875C3.37109 17.0506 3.125 17.3318 3.125 17.6131V18.1756C3.125 18.492 3.37109 18.7381 3.6875 18.7381H9.3125C9.59375 18.7381 9.875 18.492 9.875 18.1756V17.6131C9.875 17.3318 9.59375 17.0506 9.3125 17.0506H7.34375V15.8904C10.332 15.4686 12.6875 12.867 12.6875 9.7381V8.0506C12.6875 7.76935 12.4062 7.4881 12.125 7.4881Z" fill="#9196A7"/>
@@ -50,36 +50,43 @@
         search: "",
         participants: [
             {
+                link: "/learning-overseas",
                 image: require("../assets/icons/participants/ashley.png"),
                 name: "Ashley Gamboa",
                 course: "4 BS HSc, Studying abroad"
             },
             {
+                link: "/learning-overseas",
                 image: require("../assets/icons/participants/elaine.png"),
                 name: "Elaine Peralta",
                 course: "3 AB IS, Studying abroad"
             },
             {
+                link: "/learning-overseas",
                 image: require("../assets/icons/participants/galvin.png"),
                 name: "Galvin Ngo",
                 course: "Ateneo Institute for the Science and Art of Learning and Teaching Assistant Director"
             },
             {
+                link: "/setting-the-pace",
                 image: require("../assets/icons/participants/pia.png"),
                 name: "Pia Cabañero",
                 course: "2 AB IS, Neurodivergent"
             },
             {
+                link: "/setting-the-pace",
                 image: require("../assets/icons/participants/analyn.png"),
                 name: "Analyn Roquita M. Ripotola",
                 course: "Registered Guidance Counselor of the Loyola Schools Office of Guidance and Counseling (LSOGC)"
             },
             {
+                link: "/unseen-fervor",
                 image: require("../assets/icons/participants/kristelle.png"),
                 name: "Kristelle Ventura",
                 course: "3 BS LM, Financial Aid Scholar"
             },
-            {
+            {   
+                link: "/unseen-fervor",
                 image: require("../assets/icons/participants/christine.png"),
                 name: "Christine Escalona-Magboo",
                 course: "Office of Admission and Aid Scholarship Officer"
@@ -180,7 +187,9 @@
       flex-grow: 1;
       display: flex;
       align-items: center;
+      text-decoration: none;
   }
+  
 
    .participant-wrapper img {
       margin-right: 12px;
