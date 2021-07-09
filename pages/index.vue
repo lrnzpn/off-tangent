@@ -2,7 +2,7 @@
   <main>
     <section>
       <div class="flex">
-        <div class="landing-container student-abroad-bg">
+        <a class="landing-container student-abroad-bg" href="/learning-overseas">
           <label>
             Students abroad
           </label>
@@ -20,8 +20,8 @@
               </button>
             </a>
           </div>
-        </div>
-        <div class="landing-container scholars-bg">
+        </a>
+        <a class="landing-container scholars-bg" href="/unseen-fervor">
           <label>
             Scholars
           </label>
@@ -39,14 +39,14 @@
               </button>
             </a>
           </div>
-        </div>
+        </a>
       </div>
        <div class="flex">
         <div class="landing-container title-container">
           <h1>Off tangent</h1>
           <p>As the Loyola Schools completes its first, online academic year, The GUIDON dives into three unique sectors of the Ateneo community.</p>
         </div>
-        <div class="landing-container neurodivergent-students-bg">
+        <a class="landing-container neurodivergent-students-bg" href="/setting-the-pace">
           <label>
             Neurodivergent students
           </label>
@@ -64,7 +64,7 @@
               </button>
             </a>            
           </div>
-        </div>
+        </a>
       </div>
     </section>
     <footer>
