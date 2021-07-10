@@ -6,7 +6,7 @@
     :article-banner="require('../assets/banners/overlay-image-3.png')"
     article-title="Setting the pace"
     article-author="by Adrian Jesper C. Cea and Christianna P. Lugod"
-    article-short-desc="As online learning continues to be implemented in the Ateneo, issues on the neurodivergent socialization and accessibility of the Learning Management System  continue to prevail."
+    article-short-desc="As the Loyola Schools begins its second academic year, The GUIDON dives into the experiences of three unique sectors of the Ateneo community as they navigate the University's online pilot year."
     prev-article="Unseen Fervor"
     prev-article-slug="unseen-fervor"
     next-article="Learning overseas"

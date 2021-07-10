@@ -1,10 +1,36 @@
 <template>
   <v-app dark>
+    <transition name="fade">
+        <Loading v-if="showHideSpinner"/>
+    </transition>
     <v-main>
         <nuxt />
     </v-main>
   </v-app>
 </template>
+
+<script>
+import Loading from '../components/Loading'
+
+export default {
+    components: {
+        Loading,
+    },
+    beforeCreate() {
+        this.showHideSpinner = true;   
+    },
+    mounted() {
+        setTimeout(() => {
+            this.showHideSpinner = false;
+        }, 1000)
+    },
+    data() {
+        return {
+            showHideSpinner: true
+        };
+    }
+}
+</script>
 
 <style lang="scss">
 .h-100 {
@@ -45,6 +71,17 @@
         color: #001A90;
         font-weight: 700;
     }
+}
+
+// fade
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 
 </style>
